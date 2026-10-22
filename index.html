@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es" data-tema="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-en="Home | Brota">Inicio | Brota</title>
+  <link rel="icon" href="logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/tema.css">
+  <link rel="stylesheet" href="css/extras.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function () {
+      var t = null; try { t = localStorage.getItem("tema"); } catch (e) { }
+      if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-tema", t);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="logo" viewBox="0 0 120 120">
+        <path d="M60 6C88 5 114 28 113 59C112 90 88 115 58 114C29 113 6 90 7 60C8 30 31 7 60 6Z" fill="#F2B84B" />
+        <path d="M36 82C37 94 41 102 60 102C79 102 83 94 84 82C70 85 50 85 36 82Z" fill="#C8734A" stroke="#1F2A30"
+          stroke-width="4" stroke-linejoin="round" />
+        <path d="M60 82C59 66 61 54 60 40" fill="none" stroke="#1F2A30" stroke-width="5" stroke-linecap="round" />
+        <path d="M60 52C46 52 34 44 31 32C46 31 58 38 60 52Z" fill="#2F5D50" stroke="#1F2A30" stroke-width="4"
+          stroke-linejoin="round" />
+        <path d="M60 44C72 42 82 33 84 22C71 22 61 30 60 44Z" fill="#6BB898" stroke="#1F2A30" stroke-width="4"
+          stroke-linejoin="round" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="top">
+    <div class="top-in">
+      <a class="marca" href="index.html"><svg width="42" height="42" aria-hidden="true">
+          <use href="#logo" />
+        </svg><span>Brota</span></a>
+      <nav id="nav" aria-label="Principal" data-en-aria-label="Main">
+        <a href="index.html" aria-current="page" data-en="Home">Inicio</a>
+        <a href="javascript.html">JavaScript</a>
+        <a href="jquery.html">jQuery</a>
+        <a href="json.html">JSON</a>
+        <a href="hosting.html" data-en="Hosting and domains">Hosting y dominios</a>
+        <a href="herramientas.html" data-en="Google Tools">Herramientas Google</a>
+        <a href="cuestionario.html" data-en="Web Quiz">Cuestionario Web</a>
+      </nav>
+      <div class="acciones">
+        <button id="btnMusica" type="button" class="ic" aria-pressed="false" aria-label="Reproducir música"
+          data-en-aria-label="Play music">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 18V5l11-2v13" />
+            <circle cx="6" cy="18" r="3" />
+            <circle cx="17" cy="16" r="3" />
+          </svg>
+        </button>
+        <button id="btnIdioma" type="button" class="ic" aria-label="Switch to English">EN</button>
+        <button id="btnTema" type="button" class="ic" aria-label="Cambiar a modo oscuro">
+          <svg class="luna" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" />
+          </svg>
+          <svg class="sol" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="pagina">
+      <div class="hero card" id="hero" role="region" aria-roledescription="carrusel" aria-label="Galería de Brota"
+        data-en-aria-label="Brota gallery">
+        <div class="slides">
+          <article class="slide s1 on">
+            <div>
+              <h1 data-en="A planter that tells you when to water.">Una maceta que te avisa cuándo regar.</h1>
+              <p data-en="A moisture sensor and a water tank that waters your plant on its own.">Sensor de humedad y
+                depósito de agua que riega solo tu planta.</p>
+              <a class="btn" href="cuestionario.html" data-en="Take the quiz">Hacer el cuestionario</a>
+            </div>
+            <div class="art">
+              <img src="img/carrusel-1.jpg.jpeg" alt="Una maceta que te avisa cuándo regar" width="400" height="340"
+                loading="lazy">
+            </div>
+          </article>
+          <article class="slide s2">
+            <div>
+              <h2 data-en="Green: all good. Yellow: time to water.">Verde: todo bien. Amarillo: toca regar.</h2>
+              <p data-en="Two lights and zero apps to install. Runs on one battery.">Dos luces y cero apps que instalar.
+                Funciona con una pila.</p>
+            </div>
+            <div class="art">
+              <img src="img/carrusel-2.jpg.jpeg" alt="Verde: todo bien. Amarillo: toca regar" width="400" height="340"
+                loading="lazy">
+            </div>
+          </article>
+          <article class="slide s3">
+            <div>
+              <h2 data-en="Designed for apartments.">Diseñado para departamentos.</h2>
+              <p data-en="Fewer dead plants and less wasted water.">Menos plantas muertas y menos agua desperdiciada.
+              </p>
+            </div>
+            <div class="art">
+              <img src="img/carrusel-3.jpg.jpeg" alt="Diseñado para departamentos" width="400" height="340"
+                loading="lazy">
+            </div>
+          </article>
+        </div>
+        <div class="hero-ctl">
+          <div class="puntos">
+            <button type="button" aria-current="true" aria-label="Diapositiva 1" data-en-aria-label="Slide 1"></button>
+            <button type="button" aria-label="Diapositiva 2" data-en-aria-label="Slide 2"></button>
+            <button type="button" aria-label="Diapositiva 3" data-en-aria-label="Slide 3"></button>
+          </div>
+          <div class="flechas">
+            <button type="button" class="ic" id="prev" aria-label="Anterior" data-en-aria-label="Previous">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15 5l-7 7 7 7" />
+              </svg>
+            </button>
+            <button type="button" class="ic" id="next" aria-label="Siguiente" data-en-aria-label="Next">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <h2 data-en="The product">El producto</h2>
+      <div class="producto card">
+        <div class="art">
+          <img class="foto" src="img/WhatsApp Image 2026-10-10 at 6.48.11 PM.jpeg" alt="Guía de riego para plantas"
+            style="width: 480px; max-width: 100%; height: auto; display: block; margin: 0 auto;">
+        </div>
+        <div>
+          <p><strong data-en="Brand name:">Nombre comercial:</strong> Brota — Maceta automática con sensor</p>
+          <p data-en="Description: 20 cm planter with 1L tank, cotton wick, sensor lights, battery-powered, no internet needed.">
+            <strong>Descripción:</strong> Maceta de 20 cm con depósito de 1 litro, mecha de algodón y sensor que enciende
+            una luz verde cuando la tierra está húmeda y una luz amarilla cuando necesita agua. Funciona con una pila,
+            no necesita internet.
+          </p>
+          <p data-en="Target audience: Students, apartment dwellers, plant lovers who travel or forget to water.">
+            <strong>¿Para quién es?</strong> Personas que viven en departamentos, estudiantes, amantes de las plantas
+            que viajan o se les olvida regar.
+          </p>
+          <p data-en="Value proposition: Never kill a plant again. Simple, affordable, no apps, no electricity.">
+            <strong>Lo que lo hace especial:</strong> No necesitas apps ni electricidad. Ahorras agua y tus plantas
+            siempre estarán bien.
+          </p>
+        </div>
+      </div>
+
+      <h2 data-en="Visual identity">Identidad visual</h2>
+      <div class="identidad card">
+        <svg viewBox="0 0 120 120" role="img" aria-label="Logotipo de Brota" data-en-aria-label="Brota logo">
+          <use href="#logo" />
+        </svg>
+        <div>
+          <p data-en="The logo shows a green sprout growing inside a rounded shape, like a pot or the letter O.">
+            El logotipo representa un brote verde que crece dentro de una forma redondeada, como una maceta o la letra O.
+          </p>
+          <div class="paleta">
+            <div style="background:#2F5D50"><strong>#2F5D50</strong> — Verde bosque</div>
+            <div style="background:#F2B84B;color:#1F2A30"><strong>#F2B84B</strong> — Amarillo sol</div>
+            <div style="background:#1F2A30;color:#fff"><strong>#1F2A30</strong> — Carbón</div>
+          </div>
+          <ul>
+            <li><strong>Verde bosque</strong> → naturaleza, calma, crecimiento</li>
+            <li><strong>Amarillo sol</strong> → energía, alegría, luz</li>
+            <li><strong>Carbón</strong> → seriedad, claridad, confianza</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 data-en="Contact us">Contáctanos</h2>
+      <form id="formularioContacto" class="card">
+        <div class="campo">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" required>
+        </div>
+        <div class="campo">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="campo">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" rows="5" required></textarea>
+        </div>
+        <div class="envio" style="display:flex; flex-wrap:wrap; gap:.8rem;">
+          <button type="submit" class="btn" data-via="discord" data-en="Discord message">Mensaje de Discord</button>
+          <button type="submit" class="btn" data-via="gmail" data-en="Gmail message">Mensaje de Gmail</button>
+        </div>
+        <div id="estadoForm" role="status" aria-live="polite" style="margin-top: 1rem; font-weight: 500;"></div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>©️ 2026 Brota — Proyecto escolar. Hecho con HTML, CSS y JavaScript 💚</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/musica.js"></script>
+  <script src="js/tema.js"></script>
+  <script src="js/idioma.js"></script>
+</body>
+
+</html>
